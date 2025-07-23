@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  wordpress:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./bocek:/var/www/html/wp-content/themes/bocek
+      - ./uploads:/var/www/html/wp-content/uploads
+      - ./plugins:/var/www/html/wp-content/plugins/custom
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_TABLE_PREFIX: wp_
+    depends_on:
+      - db
+    networks:
+      - wordpress-network
+
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+    networks:
+      - wordpress-network
+
+  node:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./bocek:/app
+    command: sh -c "npm install && npm run watch"
+    networks:
+      - wordpress-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: rootpassword
+    depends_on:
+      - db
+    networks:
+      - wordpress-network
+
+volumes:
+  db_data:
+
+networks:
+  wordpress-network:
+    driver: bridge

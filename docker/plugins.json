@@ -1,0 +1,58 @@
+{
+  "plugins": [
+    {
+      "name": "advanced-custom-fields",
+      "source": "wordpress",
+      "activate": true
+    },
+    {
+      "name": "polylang",
+      "source": "wordpress",
+      "activate": true
+    },
+    {
+      "name": "loco-translate",
+      "source": "wordpress",
+      "activate": true
+    },
+    {
+      "name": "duplicate-page",
+      "source": "wordpress",
+      "activate": true
+    },
+    {
+      "name": "simple-history",
+      "source": "wordpress",
+      "activate": true
+    },
+    {
+      "name": "automatic-translations-for-polylang",
+      "source": "wordpress",
+      "activate": true
+    }
+  ],
+  "custom_plugins": [
+    {
+      "name": "advanced-custom-fields-pro",
+      "path": "custom/advanced-custom-fields-pro/acf.php",
+      "activate": true,
+      "description": "ACF Pro - custom plugin, not available via WP-CLI"
+    },
+    {
+      "name": "digitalmediate-wp-toolkit",
+      "path": "custom/digitalmediate-wp-toolkit/digitalmediate-wp-toolkit.php",
+      "activate": true,
+      "description": "Digital Mediate toolkit - custom plugin"
+    },
+    {
+      "name": "digitalmediate-zalohovani",
+      "path": "custom/digitalmediate-zalohovani/digitalmediate-zalohovani.php",
+      "activate": true,
+      "description": "Digital Mediate backup plugin - custom plugin"
+    }
+  ],
+  "theme": {
+    "name": "bocek",
+    "activate": true
+  }
+}

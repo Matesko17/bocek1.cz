@@ -1,0 +1,10 @@
+node_modules
+.git
+.gitignore
+bocek/node_modules
+bocek/build
+*.log
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
