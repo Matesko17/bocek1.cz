@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.40",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "start": "npm install",
+    "build": "webpack --mode=development",
+    "build:production": "webpack --mode=production",
+    "build:svg_sprites": "powershell -ExecutionPolicy ByPass -File assets/img/svg_sprites/make_svg_sprite.ps1",
+    "watch": "webpack --watch --mode=development"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

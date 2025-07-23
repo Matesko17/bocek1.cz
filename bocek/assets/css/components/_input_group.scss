@@ -1,0 +1,78 @@
+.input_group {
+  background-color: #fff;
+  border: 1px solid #DAE2E6;
+  border-radius: 2.8rem;
+  position: relative;
+  width: 100%;
+  height: 5.6rem;
+  transition: background-color .2s;
+
+  &:has(input:focus-visible), &:has(input:focus) {
+    border-color: #414B4F;
+  }
+
+  &.filled {
+    label {
+      margin-top: -1rem;
+      margin-left: 1.5rem;
+      font-size: 1.3rem;
+      background-color: #F9F9F9;
+      border: 1px solid #DAE2E6;
+      padding: 0.4rem 1rem;
+      border-radius: 2.8rem;
+      height: auto;
+      transition: margin-top .5s ease-out, background-color .3s .01s ease-out;
+      color: #414B4F;
+    }
+
+    input {
+      z-index: 3;
+    }
+  }
+
+  label {
+    position: absolute;
+    z-index: 2;
+    line-height: 1;
+    padding-inline: 2.5rem;
+    transition: margin-top .5s ease-out;
+    cursor: text;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+    color: #9FAFB6;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: none;
+    background-color: unset;
+    padding-inline: 2.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.02rem;
+
+    &:focus-visible, &:focus {
+      outline: none;
+      z-index: 3;
+    }
+
+    &:focus-visible + label {
+      margin-top: -1rem;
+      margin-left: 1.5rem;
+      font-size: 1.3rem;
+      background-color: #F9F9F9;
+      border: 1px solid #DAE2E6;
+      padding: 0.4rem 1rem;
+      border-radius: 2.8rem;
+      height: auto;
+      transition: margin-top .5s ease-out, background-color .3s .01s ease-out;
+      color: #414B4F;
+    }
+  }
+}

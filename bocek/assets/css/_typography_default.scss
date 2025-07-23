@@ -1,0 +1,85 @@
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1,
+.h1 {
+  font-size: 5.84rem;
+}
+
+h2,
+.h2 {
+  font-size: 4.8rem;
+}
+
+h3,
+.h3 {
+  font-size: 3.2rem;
+}
+
+h4,
+.h4 {
+  font-size: 3.1rem;
+}
+
+h5,
+.h5 {
+  font-size: 2.5rem;
+}
+
+h6,
+.h6 {
+  font-size: 2rem;
+}
+
+a {
+  color: $primary-link-color;
+  text-decoration: $primary-link-decoration;
+
+  &:hover {
+    color: $primary-link-color-on-hover;
+    text-decoration: $primary-link-decoration-on-hover;
+  }
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  user-select: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  color: $primary-text-color;
+}
+
+label {
+  cursor: pointer;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+}

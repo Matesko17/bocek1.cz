@@ -1,0 +1,19 @@
+.plugin_created_by_dm {
+  video {
+    display: block;
+  }
+  
+  svg {
+    display: none;
+  }
+
+  @include resp(700px) {
+    video {
+      display: none;
+    }
+  
+    svg {
+      display: block;
+    }
+  }
+}

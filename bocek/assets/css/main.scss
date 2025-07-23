@@ -1,0 +1,26 @@
+//fonts
+@import 'fonts/roboto';
+
+//variables
+@import 'variables';
+
+//default
+@import 'default', 'typography_default', 'typography_content', 'typography_content_wordpress';
+
+//animations
+@import 'animations/animations';
+
+//components
+@import 'components/input', 'components/button';
+
+//plugins
+@import '../plugins/lazy_image_loading/lazy_image_loading', '../plugins/contact_form/contact_form', '../plugins/created_by_dm/index';
+
+//page components
+@import 'header', 'footer';
+
+//pages
+@import 'pages/mainpage', 'pages/subpage';
+
+//breakpoints
+@import 'breakpoints/1800px', 'breakpoints/1500px', 'breakpoints/1250px', 'breakpoints/1000px', 'breakpoints/750px', 'breakpoints/550px', 'breakpoints/400px', 'breakpoints/350px';

@@ -1,0 +1,67 @@
+.typography_content {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 3rem;
+
+    &h1 {
+      margin-bottom: 3rem;
+    }
+
+    &:not(:first-child) {
+      margin-top: 5rem;
+    }
+  }
+
+  /*
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+    */
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    > img, > svg {
+      display: inline;
+      height: auto;
+    }
+  }
+
+  ul, ol {
+    //list-style-position: inside;
+    list-style-type: revert;
+    padding-inline-start: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    ul, ol {
+      padding-inline-start: 40px;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 0.2rem 1rem;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+footer {
+	border-radius: 2rem;
+	background: #383838;
+	color: #FFF;
+	margin: 3.5rem;
+	margin-top: 0;
+	padding: 6.5rem 7.2rem 4.5rem;
+
+	.cols-3 {
+		display: flex;
+		justify-content: space-between;
+		gap: 6rem 4rem;
+
+		.left {
+			display: flex;
+			align-items: flex-start;
+			gap: 6rem;
+
+			img, svg {
+				width: 28.8rem;
+				height: auto;
+			}
+
+			div {
+				max-width: 34.9rem;
+				color: #FFF;
+				font-size: max(1.6rem, 12px);
+			}
+		}
+
+		.center {
+			display: flex;
+			gap: 4rem 7rem;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				max-width: 300px;
+				min-width: 10rem;
+
+				li {
+					a {
+						display: block;
+						color: #FFF;
+						font-size: max(2rem, 14px);
+						text-transform: uppercase;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		.right {
+			p {
+				text-align: right;
+			}
+
+			ul {
+				margin-top: 2.9rem;
+				display: flex;
+				justify-content: flex-end;
+				gap: 3rem;
+
+				li {
+					a {
+						display: block;
+
+						img, svg {
+							width: 28px;
+							height: 28px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.line {
+		margin-top: 8.4rem;
+		height: 1px;
+		opacity: 0.67;
+		background: #FFF;
+	}
+
+	.last {
+		margin-top: 3.4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 3rem;
+
+		p, a, div {
+			color: #FFF;
+			font-size: max(1.6rem, 11px);
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	@include resp(1500px) {
+		.cols-3 .left {
+			img, svg {
+				width: 20rem;
+			}
+		}
+	}
+
+	@include resp(1100px) {
+		.cols-3 {
+			flex-direction: column;
+
+			.right p {
+				text-align: left;
+			}
+
+			.right ul {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	@include resp(900px) {
+		.last {
+			flex-direction: column;
+		}
+	}
+
+	@include resp(470px) {
+		.cols-3 .left {
+			flex-direction: column;
+
+			img {
+				width: 70%;
+				margin-inline: auto;
+			}
+		}
+	}
+
+	@include resp(430px) {
+		padding: 4rem;
+		padding-top: 6rem;
+
+		.cols-3 .center {
+			flex-direction: column;
+		}
+	}
+}

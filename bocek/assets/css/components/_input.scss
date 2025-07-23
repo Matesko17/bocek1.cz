@@ -1,0 +1,28 @@
+input, textarea {
+	display: block;
+	appearance: none;
+	border: none;
+	padding: 2rem;
+	border-radius: 100rem;
+	border-bottom: 2px solid #FFF;
+	background: rgba(255, 255, 255, 0.40);
+	backdrop-filter: blur(9.649999618530273px);
+	color: #FFF;
+	width: 100%;
+	transition: border-bottom 0.3s ease;
+
+	&::placeholder {
+		color: #FFF;
+	}
+
+	&:focus {
+		outline: none;
+		border-bottom: 2px solid #730d22;
+	}
+}
+
+textarea {
+	border-radius: 2rem;
+	height: 14.2rem;
+	resize: vertical;
+}

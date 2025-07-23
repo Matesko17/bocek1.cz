@@ -1,0 +1,64 @@
+/* ==========================================================================
+   NORMALIZE
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+::selection {
+  color: $selection-color;
+  background-color: $selection-bg-color;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%; //10px base
+  scroll-behavior: smooth;
+
+  &.disable-scroll, &.disable-scroll body, &.has-lightbox, &.has-lightbox body {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: $default-font-family;
+  font-weight: $default-font-weight;
+  font-size: max($default-font-size, 9px); //not above 9px font-size
+  color: $primary-text-color;
+  line-height: $default-line-height;
+  background-color: $default-bg-color;
+  -webkit-tap-highlight-color: transparent; //chrome mobile: disable link blue highlighting
+
+  main {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: calc($container-width + calc($container-padding * 2));
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.anchor {
+  position: absolute;
+}
+
+/* ==========================================================================
+   MIXINS
+   ========================================================================== */
+   
+// Define the Sass mixin for responsive styles
+@mixin resp($maxWidth) {
+  @media only screen and (max-width: $maxWidth) {
+    @content; // This will inject the styles from the calling block
+  }
+}

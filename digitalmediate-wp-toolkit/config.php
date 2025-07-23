@@ -1,0 +1,16 @@
+<?php $dm_toolkit_config = array (
+  'dm_toolkit_disable_jquery_migrate' => 1,
+  'dm_toolkit_disable_jquery' => 0,
+  'dm_toolkit_disable_wp_emoji' => 1,
+  'dm_toolkit_disable_wp_styles' => 1,
+  'dm_toolkit_disable_wc_styles' => 0,
+  'dm_toolkit_svg_support' => 1,
+  'dm_toolkit_webp' => 1,
+  'dm_toolkit_disable_p_in_excerpt' => 1,
+  'dm_toolkit_disable_empty_string_in_search' => 1,
+  'dm_toolkit_form_update_settings' => 1,
+  'dm_toolkit_disable_big_image_treshold' => 1,
+  'dm_toolkit_simple_history_allow_emailing' => 1,
+  'config_simple_history_days_history' => '4380',
+  'config_zastupny_obrazek' => '259',
+);

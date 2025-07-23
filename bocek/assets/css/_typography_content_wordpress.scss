@@ -1,0 +1,44 @@
+.typography_content {
+  //WORDPRESS classes
+  .has-text-align-center {
+    text-align: center;
+  }
+
+  .has-text-align-right {
+    text-align: right;
+  }
+
+  .wp-block-image {
+    margin-bottom: 3rem;
+
+    &:not(.is-resized) img {
+      width: 100%;
+    }
+
+    &.alignleft {
+      float: left;
+      margin: 0 3rem 1.5rem 0;
+    }
+
+    &.aligncenter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &.alignright {
+      float: right;
+      margin: 0 0 1.5rem 3rem;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .wp-element-caption {
+      margin-top: 0.5rem;
+    }
+  }
+}

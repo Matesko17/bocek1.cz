@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Boček\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-19 21:08+0000\n"
+"PO-Revision-Date: 2025-06-12 15:29+0000\n"
+"Last-Translator: Martin Kováč\n"
+"Language-Team: English (UK)\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.1\n"
+"X-Domain: bocek"
+
+#. Name of the theme
+msgid "Boček"
+msgstr "Boček"
+
+#: 404.php:19
+msgid "Chyba 404"
+msgstr "Error 404"
+
+#. Author of the theme
+msgid "Digital Mediate"
+msgstr "Digital Mediate"
+
+#: footer.php:35
+msgid "E-mail *"
+msgstr ""
+"E-mail *\n"
+
+#. Author URI of the theme
+msgid "https://www.digitalmediate.cz/"
+msgstr "https://www.digitalmediate.cz/"
+
+#: footer.php:34
+msgid "Jméno a Příjmení"
+msgstr "Name and surname"
+
+#: footer.php:44
+msgid "O vaše data je u nás postaráno. Přečtěte si naše"
+msgstr "O vaše data je u nás postaráno. Přečtěte si naše"
+
+#: footer.php:45
+msgid "Odeslat"
+msgstr "Submit"
+
+#. Description of the theme
+msgid ""
+"Optimalizovaná a plně responzivní WordPress šablona na míru pro Boček. "
+"Vytvořeno z unikátního grafického návrhu od <strong>Digital Mediate</strong>."
+" Zásluhy: <strong>Jana Opletalová</strong> (projektové řízení), <strong>"
+"Lukáš Hutter</strong> (grafika), <strong>Martin Homola</strong> (kódování a "
+"programování) a další..."
+msgstr ""
+"Optimalizovaná a plně responzivní WordPress šablona na míru pro Boček. "
+"Vytvořeno z unikátního grafického návrhu od <strong>Digital Mediate</strong>."
+" Zásluhy: <strong>Jana Opletalová</strong> (projektové řízení), <strong>"
+"Lukáš Hutter</strong> (grafika), <strong>Martin Homola</strong> (kódování a "
+"programování) a další..."
+
+#. Name of the template
+#: page-podstranka-univerzalni.php:2
+msgid "Podstránka univerzální"
+msgstr ""
+
+#: 404.php:27
+msgid "Požadovaná stránka nebyla nalezena"
+msgstr "Requested page was not found"
+
+#: footer.php:37
+msgid "Telefon"
+msgstr "Phone"
+
+#: footer.php:38
+msgid "Váš vzkaz *"
+msgstr "Your message *"
+
+#: footer.php:117 footer.php:120
+msgid "Web vytvořil digital mediate."
+msgstr "The website was created by digital mediate."

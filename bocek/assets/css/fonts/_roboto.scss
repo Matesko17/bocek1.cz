@@ -1,0 +1,57 @@
+/**
+ * @license
+ *
+ * Font Family: Roboto
+ * Designed by: Christian Robertson
+ * URL: https://fonts.google.com/specimen/Roboto
+ * © 2023 Google
+ *
+ * Font Styles:
+ * Roboto Variable(Variable font)
+ * Roboto Variable Italic(Variable font)
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 100.0 to 900.0)
+* 'wdth' (range from 75.0 to 100.0)
+
+*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/Roboto-VariableFont_wdth_wght.woff2') format('woff2'), url('../fonts/roboto/Roboto-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 100.0 to 900.0)
+* 'wdth' (range from 75.0 to 100.0)
+
+*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/Roboto-Italic-VariableFont_wdth_wght.woff2') format('woff2'), url('../fonts/roboto/Roboto-Italic-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  font-style: italic;
+}
