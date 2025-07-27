@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -eo pipefail
 
 # Wait for database to be ready
 echo "Waiting for database connection..."
@@ -15,14 +15,17 @@ apache2-foreground &
 APACHE_PID=$!
 
 # Wait for Apache to start
-sleep 10
+sleep 5
 
 # Check if WordPress is installed
 if ! wp core is-installed --allow-root 2>/dev/null; then
     echo "Installing WordPress..."
     
+    # Download WordPress core with memory limit
+    export WP_CLI_PHP_ARGS='-d memory_limit=512M'
+    
     # Download WordPress core
-    wp core download --allow-root --force
+    wp core download --allow-root --force --quiet
     
     # Install WordPress
     wp core install \
@@ -31,12 +34,13 @@ if ! wp core is-installed --allow-root 2>/dev/null; then
         --admin_user="admin" \
         --admin_password="admin" \
         --admin_email="admin@example.com" \
-        --allow-root
+        --allow-root \
+        --quiet
     
     echo "WordPress installed successfully!"
     
     # Install and configure plugins
-    /usr/local/bin/install-plugins.sh
+    /usr/local/bin/install-plugins.sh &
     
     echo "Setup completed!"
 else

@@ -90,7 +90,7 @@ Plugins are automatically installed via WP-CLI on container startup:
 - Simple History
 - Automatic Translations for Polylang
 
-**Custom Plugins** (mounted from /plugins directory):
+**Custom Plugins** (mounted individually from /plugins directory):
 - ACF Pro
 - Digital Mediate WP Toolkit
 - Digital Mediate Zalohovani

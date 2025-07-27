@@ -1,2 +1,0 @@
-(()=>{"use strict";const e=function(){document.querySelectorAll("span[data-lazy-image-loading]").forEach((function(e){let t=e.getAttribute("data-lazy-image-loading"),a=e.querySelector("img");e.style.backgroundImage="url('"+t+"')",a.complete?e.classList.remove("loading"):(e.classList.add("loading"),a.addEventListener("load",(function(){e.classList.remove("loading")}),{once:!0}))}))};document.addEventListener("DOMContentLoaded",(()=>{e()}))})();
-//# sourceMappingURL=main_sync.js.map

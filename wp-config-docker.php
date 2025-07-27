@@ -53,6 +53,7 @@ define( 'SCRIPT_DEBUG', true );
  * WordPress Memory Limit
  */
 define( 'WP_MEMORY_LIMIT', '512M' );
+ini_set( 'memory_limit', '512M' );
 
 /**
  * WordPress Auto Updates
