@@ -462,33 +462,39 @@
 
 	@include resp(1350px) {
 		.wrap .blocks {
-			> *:not(.block-landscape):not(.block-portrait) {
+			> * {
 				width: calc((100% / 3) - (3rem * (1 - 1/3)));
-			}
-			
-			.block-landscape {
-				width: calc((100% / 2) - (3rem * (1 - 1/2)));
 			}
 			
 			.block-portrait {
-				width: calc((100% / 3) - (3rem * (1 - 1/3)));
+				aspect-ratio: 1.4 / 1;
+				
+				.card-portrait {
+					.image-section {
+						flex: 1.2;
+					}
+					
+					.content-section {
+						flex: 0.8;
+						padding: 1.5rem 2rem;
+						
+						h3 {
+							font-size: max(1.4rem, 14px);
+						}
+					}
+				}
 			}
 		}
 	}
 
 	@include resp(950px) {
 		.wrap .blocks {
-			> *:not(.block-landscape):not(.block-portrait) {
+			> * {
 				width: calc((100% / 2) - (3rem * (1 - 1/2)));
-			}
-			
-			.block-landscape {
-				width: 100%;
-				aspect-ratio: 2.2 / 1;
 			}
 			
 			.block-portrait {
-				width: calc((100% / 2) - (3rem * (1 - 1/2)));
+				aspect-ratio: 1.2 / 1;
 			}
 		}
 	}
