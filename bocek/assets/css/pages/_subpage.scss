@@ -250,12 +250,6 @@
 					color: #3A3A3A;
 					font-size: max(2rem, 16px);
 					font-weight: 700;
-
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 6;
-          line-clamp: 6;
-          -webkit-box-orient: vertical;
 				}
 
 				.arrow {
@@ -297,30 +291,245 @@
 					}
 				}
 			}
+
+			// New card variants
+			.block-landscape {
+				aspect-ratio: 28 / 24;
+				padding: 0;
+				overflow: hidden;
+
+				.card-landscape {
+					display: flex;
+					height: 100%;
+					position: relative;
+					
+					.image-section {
+						flex: 1.8;
+						position: relative;
+						overflow: hidden;
+						
+						img {
+							position: absolute;
+							inset: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+					
+					.content-section {
+						flex: 1;
+						padding: 2.5rem 3rem 2.5rem;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						position: relative;
+						
+						h3 {
+							color: #3A3A3A;
+							font-size: max(1.6rem, 16px);
+							font-weight: 700;
+							line-height: 1.3;
+							margin: 0;
+						}
+					}
+					
+					.arrow {
+						width: 6.8rem;
+						height: 6.8rem;
+						position: absolute;
+						bottom: 2.5rem;
+						right: -7rem;
+						max-width: 32.3rem;
+						transition: right .5s ease-out;
+						z-index: 1;
+					}
+
+					.overlay_white {
+						display: none;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						width: 50%;
+						background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 80%);
+						opacity: 0;
+						transition: opacity .5s ease-out;
+					}
+				}
+			}
+
+			.block-portrait {
+				aspect-ratio: 28 / 24;
+				padding: 0;
+				overflow: hidden;
+
+				.card-portrait {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					position: relative;
+					
+					.image-section {
+						flex: 2;
+						position: relative;
+						overflow: hidden;
+						
+						img {
+							position: absolute;
+							inset: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+					
+					.content-section {
+						flex: 1;
+						padding: 2rem 2.5rem;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						position: relative;
+						
+						h3 {
+							color: #3A3A3A;
+							font-size: max(1.6rem, 14px);
+							font-weight: 700;
+							line-height: 1.3;
+							margin: 0;
+						}
+					}
+					
+					.arrow {
+						width: 6.8rem;
+						height: 6.8rem;
+						position: absolute;
+						bottom: 2rem;
+						right: -7rem;
+						max-width: 32.3rem;
+						transition: right .5s ease-out;
+						z-index: 1;
+					}
+
+					.overlay_white {
+						display: none;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						width: 50%;
+						background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 80%);
+						opacity: 0;
+						transition: opacity .5s ease-out;
+					}
+				}
+			}
+			
+			a.block-landscape {
+				.overlay_white {
+					display: block;
+				}
+
+				&:hover {
+					.arrow {
+						right: 4rem;
+					}
+
+					.overlay_white {
+						opacity: 1;
+					}
+				}
+			}
+			
+			a.block-portrait {
+				.overlay_white {
+					display: block;
+				}
+
+				&:hover {
+					.arrow {
+						right: 4rem;
+					}
+
+					.overlay_white {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 
 	@include resp(1350px) {
-		.wrap .blocks > * {
-			width: calc((100% / 3) - (3rem * (1 - 1/3)));
+		.wrap .blocks {
+			> *:not(.block-landscape):not(.block-portrait) {
+				width: calc((100% / 3) - (3rem * (1 - 1/3)));
+			}
+			
+			.block-landscape {
+				width: calc((100% / 2) - (3rem * (1 - 1/2)));
+			}
+			
+			.block-portrait {
+				width: calc((100% / 3) - (3rem * (1 - 1/3)));
+			}
 		}
 	}
 
 	@include resp(950px) {
-		.wrap .blocks > * {
-			width: calc((100% / 2) - (3rem * (1 - 1/2)));
+		.wrap .blocks {
+			> *:not(.block-landscape):not(.block-portrait) {
+				width: calc((100% / 2) - (3rem * (1 - 1/2)));
+			}
+			
+			.block-landscape {
+				width: 100%;
+				aspect-ratio: 2.2 / 1;
+			}
+			
+			.block-portrait {
+				width: calc((100% / 2) - (3rem * (1 - 1/2)));
+			}
 		}
 	}
 
 	@include resp(600px) {
-		.wrap .blocks > * {
-			width: 100%;
-			aspect-ratio: unset;
-
-			h3 {
-				position: static;
-				margin-top: 3rem;
-				display: block;
+		.wrap .blocks {
+			> * {
+				width: 100%;
+				aspect-ratio: unset;
+				
+				&.block-default h3 {
+					position: static;
+					margin-top: 3rem;
+					display: block;
+				}
+				
+				&.block-landscape {
+					.card-landscape {
+						flex-direction: column;
+						
+						.content-section {
+							padding: 3rem;
+							
+							h3 {
+								font-size: max(1.6rem, 16px);
+							}
+						}
+					}
+				}
+				
+				&.block-portrait {
+					aspect-ratio: 1.2 / 1;
+					
+					.card-portrait .content-section {
+						padding: 2.5rem;
+						
+						h3 {
+							font-size: max(1.8rem, 15px);
+						}
+					}
+				}
 			}
 		}
 	}

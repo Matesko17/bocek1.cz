@@ -6,11 +6,6 @@
       "activate": true
     },
     {
-      "name": "polylang",
-      "source": "wordpress",
-      "activate": true
-    },
-    {
       "name": "loco-translate",
       "source": "wordpress",
       "activate": true
@@ -37,6 +32,12 @@
       "path": "advanced-custom-fields-pro/acf.php",
       "activate": true,
       "description": "ACF Pro - custom plugin, not available via WP-CLI"
+    },
+    {
+      "name": "polylang-pro",
+      "path": "polylang-pro/polylang.php",
+      "activate": true,
+      "description": "Polylang Pro - premium multilingual plugin"
     },
     {
       "name": "digitalmediate-wp-toolkit",

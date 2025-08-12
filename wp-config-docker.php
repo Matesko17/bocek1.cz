@@ -68,8 +68,8 @@ define( 'FS_METHOD', 'direct' );
 /**
  * WordPress Site URLs
  */
-define( 'WP_HOME', 'http://localhost:8080' );
-define( 'WP_SITEURL', 'http://localhost:8080' );
+define( 'WP_HOME', 'http://cs.localhost:8080' );
+define( 'WP_SITEURL', 'http://cs.localhost:8080' );
 
 /* That's all, stop editing! Happy publishing. */
 
